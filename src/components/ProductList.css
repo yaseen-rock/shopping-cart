@@ -1,70 +1,98 @@
 .product-list-container {
-    padding: 20px;
-  }
-  
+  padding: 20px;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #eee;
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.price {
+  color: #333;
+  font-weight: bold;
+}
+
+.discount {
+  color: #e91e63;
+}
+
+.rating {
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.add-to-cart-button {
+  background: #00796b;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background: #005a4d;
+}
+
+@media (max-width: 768px) {
   .product-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
   }
-  
   .product-card {
-    border: 1px solid #eee;
-    padding: 15px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.2s;
+    padding: 10px;
   }
-  
-  .product-card:hover {
-    transform: scale(1.05);
-  }
-  
   .image-container {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    height: 150px;
   }
-  
-  .image-container img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
   .product-title {
-    font-size: 1.2em;
-    margin: 10px 0;
+    font-size: 1em;
   }
-  
   .price {
-    color: #333;
-    font-weight: bold;
+    font-size: 0.9em;
   }
-  
   .discount {
-    color: #e91e63;
+    font-size: 0.9em;
   }
-  
   .rating {
-    color: #00796b;
-    margin-bottom: 10px;
+    font-size: 0.9em;
   }
-  
   .add-to-cart-button {
-    background: #00796b;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 4px 8px;
+    font-size: 0.9em;
   }
-  
-  .add-to-cart-button:hover {
-    background: #005a4d;
-  }
-  
+}
