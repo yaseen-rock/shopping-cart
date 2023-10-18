@@ -1,0 +1,155 @@
+.navbar {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu-item {
+  margin-right: 5px;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #fff;
+}
+
+.navbar-menu-item.active {
+  font-weight: bold;
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-icon i {
+  font-size: 24px;
+  color: #fff;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #f44336;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 14px;
+}
+
+.cart-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  color: #000;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  overflow-y: auto;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-popup.open {
+  transform: translateX(0);
+}
+
+.cart-popup-header {
+  background-color: #e91e63;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-popup-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-popup li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-popup button {
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-popup button:hover {
+  background: #c2185b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-title {
+    margin: 10px 0;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+  }
+
+  .navbar-menu-item {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .cart-icon {
+    margin-top: 10px;
+  }
+
+  .cart-popup {
+    width: 100%;
+  }
+}
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-icon img {
+  width: 40px;
+  height: 30px; 
+  position: relative;
+}
